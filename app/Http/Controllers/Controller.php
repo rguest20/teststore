@@ -10,4 +10,11 @@ use Illuminate\Routing\Controller as BaseController;
 class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+    profile function index($user = "")
+    {
+      $user = User::find($user);
+
+      return view('welcome', ['person'= $user]);
+    }
 }

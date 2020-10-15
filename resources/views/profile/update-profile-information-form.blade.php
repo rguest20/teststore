@@ -72,6 +72,15 @@
             <x-jet-input id="email" type="email" class="mt-1 block w-full" wire:model.defer="state.email" />
             <x-jet-input-error for="email" class="mt-2" />
         </div>
+
+        <!-- Email -->
+        <div class="col-span-6 sm:col-span-4">
+            <p>Admin: <?php if (isset(Auth::User()->admin->id)) {
+    echo "Yes";
+} else {
+    echo "No";
+}?></p>
+        </div>
     </x-slot>
 
     <x-slot name="actions">

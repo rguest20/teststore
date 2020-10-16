@@ -16,8 +16,8 @@ class Admin extends Migration
         Schema::create('admins', function (Blueprint $table) {
             $table->bigIncrements('id')->index();
             $table->unsignedBigInteger('user_id')->nullable()->index();
-            $table->dateTime('created_at');
-            $table->dateTime('updated_at');
+            $table->dateTime('created_at')->nullable();
+            $table->dateTime('updated_at')->nullable();
         });
     }
 

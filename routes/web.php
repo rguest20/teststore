@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/dashboard');
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -22,5 +22,14 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 })->name('dashboard');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/admin', function () {
-    return view('admin.create');
+    return view('admin.dashboard');
 })->name('admin');
+
+Route::middleware(['auth:sanctum', 'verified'])->post('/admin/index/',
+    [\App\Http\Controllers\AdminController::class, 'index'])->name('admin.index');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/admin/index/{username}/create',
+    [\App\Http\Controllers\AdminController::class, 'create'])->name('admin.create');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/admin/index/{username}/destroy',
+    [\App\Http\Controllers\AdminController::class, 'destroy'])->name('admin.destroy');

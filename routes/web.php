@@ -17,7 +17,7 @@ Route::get('/', function () {
     return redirect('/dashboard');
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
@@ -33,3 +33,18 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/admin/index/{username}/cr
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/admin/index/{username}/destroy',
     [\App\Http\Controllers\AdminController::class, 'destroy'])->name('admin.destroy');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/category/index',
+    [\App\Http\Controllers\CategoryController::class, 'index'])->name('category.index');
+
+Route::middleware(['auth:sanctum', 'verified'])->post('category/create',
+    [\App\Http\Controllers\CategoryController::class, 'create'])->name('category.create');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('category/{id}/delete',
+    [\App\Http\Controllers\CategoryController::class, 'destroy'])->name('category.delete');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('category/{id}/edit',
+    [\App\Http\Controllers\CategoryController::class, 'edit'])->name('category.edit');
+
+Route::middleware(['auth:sanctum', 'verified'])->post('category/{id}/update',
+    [\App\Http\Controllers\CategoryController::class, 'update'])->name('category.update');

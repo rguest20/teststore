@@ -19,20 +19,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4626e1a1-b3b8-4249-b906-d8374db6de06" name="Default Changelist" comment="Building admin interface">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+    <list default="true" id="4626e1a1-b3b8-4249-b906-d8374db6de06" name="Default Changelist" comment="unversioned file upload">
+      <change afterPath="$PROJECT_DIR$/resources/views/category/category_details.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/category/category_updates.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/category/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_15_091254_admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_15_091254_admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_15_084940_categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_15_084940_categories.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shop.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcomearchive.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +182,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/category" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -194,6 +191,11 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rgues\laravel\teststore\resources\views\category" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -215,7 +217,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602789570101</updated>
       <workItem from="1602789571520" duration="9188000" />
-      <workItem from="1602833946262" duration="6806000" />
+      <workItem from="1602833946262" duration="13954000" />
     </task>
     <task id="LOCAL-00001" summary="Building admin interface">
       <created>1602789785198</created>
@@ -224,7 +226,21 @@
       <option name="project" value="LOCAL" />
       <updated>1602789785198</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="extra admin can be added and admins can now delete users">
+      <created>1602841017288</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1602841017288</updated>
+    </task>
+    <task id="LOCAL-00003" summary="unversioned file upload">
+      <created>1602841036553</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1602841036553</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,7 +260,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Building admin interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Building admin interface" />
+    <MESSAGE value="extra admin can be added and admins can now delete users" />
+    <MESSAGE value="unversioned file upload" />
+    <option name="LAST_COMMIT_MESSAGE" value="unversioned file upload" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1602790751193">
@@ -267,9 +285,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="196" height="457" key="HiddenNamespacesPopup/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602796443229" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1602789625094">
+    <state width="583" height="446" key="SwitcherDM" timestamp="1602841870037">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602789625094" />
+    <state width="583" height="446" key="SwitcherDM/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602841870037" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602841064688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602841064688" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1602841873823">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602841873823" />
   </component>
 </project>

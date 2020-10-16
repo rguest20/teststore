@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use http\Env\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
@@ -13,7 +15,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return view('category.index');
     }
 
     /**
@@ -21,10 +23,17 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
-        //
+        $query = ($request->input('name'));
+        DB::table('categories')->insert([
+            'category_name'=> $query,
+            'category_description' => ""
+        ]);
+        return redirect('category/index');
     }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -45,7 +54,7 @@ class CategoryController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('category.show');
     }
 
     /**
@@ -56,7 +65,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('category.edit', ['category'=> $id]);
     }
 
     /**
@@ -68,7 +77,13 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $category_name = ($request->input('name'));
+        $category_description = ($request->input('description'));
+        DB::table('categories')->where('category_name', $id)->update([
+            'category_name' => $category_name,
+            'category_description' => $category_description
+        ]);
+        return redirect('category/index');
     }
 
     /**
@@ -79,6 +94,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('categories')->where('category_name',$id)->delete();
+        return redirect('category/index');
     }
 }

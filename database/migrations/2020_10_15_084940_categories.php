@@ -17,6 +17,8 @@ class Categories extends Migration
             $table->bigIncrements('id')->index();
             $table->string('category_name')->nullable();
             $table->string('category_description')->nullable();
+            $table->dateTime('created_at')->nullable();
+            $table->dateTime('updated_at')->nullable();
         });
     }
 

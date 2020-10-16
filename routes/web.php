@@ -48,3 +48,18 @@ Route::middleware(['auth:sanctum', 'verified'])->get('category/{id}/edit',
 
 Route::middleware(['auth:sanctum', 'verified'])->post('category/{id}/update',
     [\App\Http\Controllers\CategoryController::class, 'update'])->name('category.update');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('category/{id}/products/index',
+    [\App\Http\Controllers\ProductController::class, 'index'])->name('product.index');
+
+Route::middleware(['auth:sanctum', 'verified'])->post('category/{id}/products/create',
+    [\App\Http\Controllers\ProductController::class, 'create'])->name('product.create');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('category/{id}/products/{product}/edit',
+    [\App\Http\Controllers\ProductController::class, 'edit'])->name('product.edit');
+
+Route::middleware(['auth:sanctum', 'verified'])->post('category/{id}/products/{product}/update',
+    [\App\Http\Controllers\ProductController::class, 'update'])->name('product.update');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('category/{id}/products/{product}/delete',
+    [\App\Http\Controllers\ProductController::class, 'destroy'])->name('product.delete');

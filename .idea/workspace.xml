@@ -19,17 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4626e1a1-b3b8-4249-b906-d8374db6de06" name="Default Changelist" comment="unversioned file upload">
-      <change afterPath="$PROJECT_DIR$/resources/views/category/category_details.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/category/category_updates.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/category/edit.blade.php" afterDir="false" />
+    <list default="true" id="4626e1a1-b3b8-4249-b906-d8374db6de06" name="Default Changelist" comment="Categories can now be added, deleted and edited">
+      <change afterPath="$PROJECT_DIR$/resources/views/product/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/product/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/product/product_home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/product/product_update.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/category.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Category.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_15_084940_categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_15_084940_categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/category/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/category/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_15_084955_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_15_084955_products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +181,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/category" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/product" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -194,6 +193,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rgues\laravel\teststore\resources\views\product" />
       <recent name="C:\Users\rgues\laravel\teststore\resources\views\category" />
     </key>
   </component>
@@ -217,7 +217,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602789570101</updated>
       <workItem from="1602789571520" duration="9188000" />
-      <workItem from="1602833946262" duration="13954000" />
+      <workItem from="1602833946262" duration="25308000" />
     </task>
     <task id="LOCAL-00001" summary="Building admin interface">
       <created>1602789785198</created>
@@ -240,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602841036553</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Categories can now be added, deleted and edited">
+      <created>1602848047978</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1602848047978</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -262,9 +269,14 @@
     <MESSAGE value="Building admin interface" />
     <MESSAGE value="extra admin can be added and admins can now delete users" />
     <MESSAGE value="unversioned file upload" />
-    <option name="LAST_COMMIT_MESSAGE" value="unversioned file upload" />
+    <MESSAGE value="Categories can now be added, deleted and edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="Categories can now be added, deleted and edited" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602850868110">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602850868110" />
     <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1602790751193">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -289,10 +301,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="583" height="446" key="SwitcherDM/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602841870037" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602841064688">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602848052410">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602841064688" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602848052410" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1602841873823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

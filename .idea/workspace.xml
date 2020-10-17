@@ -19,17 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4626e1a1-b3b8-4249-b906-d8374db6de06" name="Default Changelist" comment="Categories can now be added, deleted and edited">
-      <change afterPath="$PROJECT_DIR$/resources/views/product/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/product/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/product/product_home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/product/product_update.blade.php" afterDir="false" />
+    <list default="true" id="4626e1a1-b3b8-4249-b906-d8374db6de06" name="Default Changelist" comment="Items now able to be created, destroyed and updated. Linked to categories">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_15_084955_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_15_084955_products.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/product_update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/product_update.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/shop.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +211,8 @@
       <option name="presentableId" value="Default" />
       <updated>1602789570101</updated>
       <workItem from="1602789571520" duration="9188000" />
-      <workItem from="1602833946262" duration="25308000" />
+      <workItem from="1602833946262" duration="25631000" />
+      <workItem from="1602930293069" duration="4666000" />
     </task>
     <task id="LOCAL-00001" summary="Building admin interface">
       <created>1602789785198</created>
@@ -247,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602848047978</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Items now able to be created, destroyed and updated. Linked to categories">
+      <created>1602860524462</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1602860524462</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,7 +272,8 @@
     <MESSAGE value="extra admin can be added and admins can now delete users" />
     <MESSAGE value="unversioned file upload" />
     <MESSAGE value="Categories can now be added, deleted and edited" />
-    <option name="LAST_COMMIT_MESSAGE" value="Categories can now be added, deleted and edited" />
+    <MESSAGE value="Items now able to be created, destroyed and updated. Linked to categories" />
+    <option name="LAST_COMMIT_MESSAGE" value="Items now able to be created, destroyed and updated. Linked to categories" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602850868110">
@@ -301,10 +304,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="583" height="446" key="SwitcherDM/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602841870037" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602848052410">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602860531087">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602848052410" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602860531087" />
     <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1602841873823">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

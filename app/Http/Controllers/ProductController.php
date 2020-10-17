@@ -87,7 +87,7 @@ class ProductController extends Controller
         $product_description = ($request->input('description'));
         $price = ($request->input('price'));
         $units = ($request->input('units'));
-        if ($request->input('image') != "") {
+        if ($request->file('image') != null) {
             $path = request('image')->store('uploads', 'public');
         }else{
             $path = (DB::table('products')->where('id', $product)->get())[0]->image;

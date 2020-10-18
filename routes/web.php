@@ -63,3 +63,9 @@ Route::middleware(['auth:sanctum', 'verified'])->post('category/{id}/products/{p
 
 Route::middleware(['auth:sanctum', 'verified'])->get('category/{id}/products/{product}/delete',
     [\App\Http\Controllers\ProductController::class, 'destroy'])->name('product.delete');
+
+Route::middleware(['auth:sanctum', 'verified'])->post('/product/{product}/buy',
+    [\App\Http\Controllers\ProductController::class, 'buy'])->name('product.buy');
+
+Route::middleware(['auth:sanctum', 'verified'])->post('category/{id}/products/{product}/addstock',
+    [\App\Http\Controllers\ProductController::class, 'add'])->name('product.add');

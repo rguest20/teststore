@@ -47,9 +47,13 @@ class ProductController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function add(Request $request, $id, $product)
     {
-        //
+        $added = $request->input('number');
+        $currentstock = (DB::table('products')->where('id', $product)->select('units')->get())[0]->units;
+        $finalstock = $added+$currentstock;
+        DB::table('products')->where('id', $product)->update(['units' => $finalstock]);
+        return redirect ('category/'.$id.'/products/index');
     }
 
     /**
@@ -58,9 +62,14 @@ class ProductController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function buy(Request $request, $product_id)
     {
-        //
+        $purchased = $request->input('number');
+        $numberatstart = (DB::table('products')->where('id', $product_id)->select('units')->get())[0]->units;
+        $numberleft = $numberatstart-$purchased;
+        DB::table('products')->where('id', $product_id)->update(['units' => $numberleft]);
+        $product= (DB::table('products')->where('id', $product_id)->get())[0];
+        return view ('product.buy', ['product'=> $product, 'purchased' => $purchased]);
     }
 
     /**

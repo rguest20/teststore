@@ -76,6 +76,10 @@ $products = \Illuminate\Support\Facades\DB::table('products')->where('category_i
                     <p class="mt-4 mb-2 justify-text-center"><strong class="relative bottom-1">{{ $product->product_name }}</strong> <img class= "inline" src="{{ url( "storage/$product->image") }}" height="40" width = '40'> <span class = "float-right relative bottom-3">
                             <button class="inline-flex items-center justify-center p-2 rounded-md bg-blue-300 text-gray-800 hover:text-gray-800 hover:bg-red-500 focus:outline-none focus:bg-blue-900 focus:text-gray-500 transition duration-150 ease-in-out" type="button" onclick="window.location.href='{{ $product->id }}/edit'">More Detail</button>
                             <button class="inline-flex items-center justify-center p-2 rounded-md bg-blue-300 text-gray-800 hover:text-gray-800 hover:bg-red-500 focus:outline-none focus:bg-blue-900 focus:text-gray-500 transition duration-150 ease-in-out" type="button" onclick="window.location.href='{{ $product->id }}/delete'">Delete</button></span> </p>
+                    <form class="inline-block" method="post" action = "{{ $product->id }}/addstock">
+                        @csrf
+                        <p>Current stock: {{ $product->units }}</p><input class = "border mr-4" type="number" value="1" min="1" max="100000" step="1" name="number" class="w-12" autocomplete="off"> <button class="inline-flex items-center justify-center p-2 rounded-md bg-blue-300 text-gray-800 hover:text-gray-800 hover:bg-red-500 focus:outline-none focus:bg-blue-900 focus:text-gray-500 transition duration-150 ease-in-out" type="submit">Add Stock</button>
+                    </form>
                     <hr>
                 @endforeach
             </div>

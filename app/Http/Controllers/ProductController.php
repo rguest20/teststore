@@ -24,6 +24,14 @@ class ProductController extends Controller
      */
     public function create(Request $request, $id)
     {
+        $validated = $request->validate([
+            'name'=> 'required',
+            'description' => 'required',
+            'price'=> 'required',
+            'image' => 'required|image',
+            'units' => 'required',
+            'cat_id' => 'required'
+        ]);
         $name = ($request->input('name'));
         $description = ($request->input('description'));
         $price = ($request->input('price'));
@@ -49,7 +57,10 @@ class ProductController extends Controller
      */
     public function add(Request $request, $id, $product)
     {
-        $added = $request->input('number');
+        $validated = $request->validate([
+            'number' => 'required'
+        ]);
+        $added = $validated->input('number');
         $currentstock = (DB::table('products')->where('id', $product)->select('units')->get())[0]->units;
         $finalstock = $added+$currentstock;
         DB::table('products')->where('id', $product)->update(['units' => $finalstock]);
@@ -64,6 +75,9 @@ class ProductController extends Controller
      */
     public function buy(Request $request, $product_id)
     {
+        $validated = $request->validate([
+            'number'=>'required'
+        ]);
         $purchased = $request->input('number');
         $numberatstart = (DB::table('products')->where('id', $product_id)->select('units')->get())[0]->units;
         $numberleft = $numberatstart-$purchased;
@@ -92,6 +106,13 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id, $product)
     {
+        $validated= $request->validate([
+            'name'=>'required',
+            'description'=>'required',
+            'price'=>'required|numeric',
+            'units'=>'required|numeric',
+            'image'=>'required|image'
+        ]);
         $product_name = ($request->input('name'));
         $product_description = ($request->input('description'));
         $price = ($request->input('price'));

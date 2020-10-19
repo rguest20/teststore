@@ -28,7 +28,7 @@ $isadmin = DB::table('admins')->where('user_id', "=", Auth::id())->get();
             </div>
         </div>
         <div class="mt-5 md:mt-0 md:col-span-2">
-            <form name="queryadmin" method="POST" action="admin/index/">
+            <form name="queryadmin" method="POST" action="{{ url('/admin/index/') }}">
               @csrf
                 <div class="shadow overflow-hidden sm:rounded-md">
                     <div class="px-4 py-5 bg-white sm:p-6">
@@ -59,7 +59,7 @@ $isadmin = DB::table('admins')->where('user_id', "=", Auth::id())->get();
             </div>
         </div>
         <div class="mt-5 md:mt-0 md:col-span-2">
-            <button class="inline-flex items-center justify-center p-2 rounded-md bg-blue-300 text-gray-800 hover:text-gray-800 hover:bg-red-500 focus:outline-none focus:bg-blue-900 focus:text-gray-500 transition duration-150 ease-in-out" type="button" onclick="window.location.href='../category/index'">Enter Stock Control Dashboard</button>
+            <button class="inline-flex items-center justify-center p-2 rounded-md bg-blue-300 text-gray-800 hover:text-gray-800 hover:bg-red-500 focus:outline-none focus:bg-blue-900 focus:text-gray-500 transition duration-150 ease-in-out" type="button" onclick="window.location.href='{{ url("/category/index") }}'">Enter Stock Control Dashboard</button>
         </div>
     </div>
 </div>

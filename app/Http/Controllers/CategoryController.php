@@ -25,6 +25,9 @@ class CategoryController extends Controller
      */
     public function create(Request $request)
     {
+        $request->validate([
+            'name'=>'required'
+        ]);
         $query = ($request->input('name'));
         DB::table('categories')->insert([
             'category_name'=> $query,
@@ -64,6 +67,10 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $request->validate([
+            'name'=>'required',
+            'description'=>''
+        ]);
         $category_name = ($request->input('name'));
         $category_description = ($request->input('description'));
         DB::table('categories')->where('category_name', $id)->update([

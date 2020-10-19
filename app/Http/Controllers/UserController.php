@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class UserController extends Controller
 {
@@ -11,10 +12,9 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($user = "")
+    public function index()
     {
-    $user = User::find($user);
-    return view('welcome', ['person'=> $user]);
+        //Controlled by Jetstream
     }
 
     /**
@@ -46,7 +46,7 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        //Controlled By Jetstream
     }
 
     /**
@@ -55,7 +55,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
         //Controlled by Jetstream
     }

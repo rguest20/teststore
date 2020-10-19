@@ -69,3 +69,6 @@ Route::middleware(['auth:sanctum', 'verified'])->post('/product/{product}/buy',
 
 Route::middleware(['auth:sanctum', 'verified'])->post('category/{id}/products/{product}/addstock',
     [\App\Http\Controllers\ProductController::class, 'add'])->name('product.add');
+
+Route::middleware(['auth:sanctum', 'verified'])->post('/{id}/edit',
+    [\App\Http\Controllers\UserController::class, 'edit'])->name('user.edit');

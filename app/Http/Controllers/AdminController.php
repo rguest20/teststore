@@ -15,6 +15,9 @@ class AdminController extends Controller
      */
     public function index(Request $request)
     {
+        $request->validate([
+            'email'=>''
+        ]);
         $query = ($request->input('email'));
         $isadmin = DB::table('admins')->select('user_id')->get();
         $results = DB::table('users')->where('email', 'like', '%'.$query.'%')->get();

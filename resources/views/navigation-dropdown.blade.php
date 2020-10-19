@@ -13,8 +13,14 @@
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ 'Store Front' }}
                     </x-jet-nav-link>
+
+                    @if (isset(Auth::User()->admin->id))
+                        <x-jet-nav-link href="{{ route('admin') }}">
+                            {{ 'Admin' }}
+                        </x-jet-nav-link>
+                    @endif
                 </div>
             </div>
 
@@ -56,11 +62,12 @@
                         <x-jet-dropdown-link href="{{ route('profile.show') }}">
                             {{ __('Profile') }}
                         </x-jet-dropdown-link>
-
-                        <x-jet-dropdown-link href="{{ route('admin') }}">
-                            {{ __('Admin') }}
-                        </x-jet-dropdown-link>
-                        @else
+                        @if (isset(Auth::User()->admin->id))
+                            <x-jet-dropdown-link href="{{ route('admin') }}">
+                                {{ __('Admin') }}
+                            </x-jet-dropdown-link>
+                        @endif
+                      @else
                         <x-slot name="content">
                         <div class="block px-4 py-2 text-xs text-gray-400">
                             {{ __('Account') }}
@@ -72,8 +79,8 @@
                         <x-jet-dropdown-link href="{{ route('register') }}">
                             {{ __('Register') }}
                         </x-jet-dropdown-link>
-                        @endif
                       @endif
+                    @endif
 
                         @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                             <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
@@ -170,15 +177,10 @@
 
             <div class="mt-3 space-y-1">
                 <!-- Account Management -->
+                @auth
                 <x-jet-responsive-nav-link href="{{ route('profile.show') }}" :active="request()->routeIs('profile.show')">
                     {{ __('Profile') }}
                 </x-jet-responsive-nav-link>
-
-                @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                    <x-jet-responsive-nav-link href="{{ route('api-tokens.index') }}" :active="request()->routeIs('api-tokens.index')">
-                        {{ __('API Tokens') }}
-                    </x-jet-responsive-nav-link>
-                @endif
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
@@ -191,6 +193,16 @@
                     </x-jet-responsive-nav-link>
                 </form>
 
+                @else
+                    <x-jet-responsive-nav-link href="{{ route('register') }}">
+                        {{ __('Register') }}
+                    </x-jet-responsive-nav-link>
+
+                    <x-jet-responsive-nav-link href="{{ route('login') }}">
+                        {{ __('Log In') }}
+                    </x-jet-responsive-nav-link>
+
+                @endif
                 <!-- Team Management -->
                 @if (Laravel\Jetstream\Jetstream::hasTeamFeatures())
                     <div class="border-t border-gray-200"></div>

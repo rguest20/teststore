@@ -23,12 +23,15 @@
                 <p>Quantity Bought: {{ $purchased }}</p>
                 <p>Cost: £{{ $totalcost }}</p>
                 <p>Product Remaining After Purchase: {{ $product->units }}</p>
-                <p>This is a dummy function that would be used to add objects to the users basket. In 10 seconds this will return to the store front with changes updated.</p>
+                <p>This is a dummy function that would be used to add objects to the users basket. In 20 seconds this will return to the store front with changes updated.  In the event of a real store, I
+                would create an object model "Basket" that is linked to one user.  This would be created alongside the user.  Product ids and quantities could be transferred into the basket and would be spoken
+                for.  A Cron event could then empty the basket at the end of the day, restocking the virtual shelves.</p>
+                <p>To return now click <strong><a href="{{ url('/dashboard') }}">HERE</a></strong>.</p>
             </div>
         </div>
         <script>
             setTimeout(function(){
                 window.location.href = '{{ url("/dashboard")}}';
-            }, 10000);
+            }, 20000);
         </script>
 </x-app-layout>

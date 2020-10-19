@@ -19,13 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4626e1a1-b3b8-4249-b906-d8374db6de06" name="Default Changelist" comment="Items now appear in shop view, buy button needs linking up.">
-      <change afterPath="$PROJECT_DIR$/resources/views/product/buy.blade.php" afterDir="false" />
+    <list default="true" id="4626e1a1-b3b8-4249-b906-d8374db6de06" name="Default Changelist" comment="Buy buttons now work. Stock update made easier">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/product/product_home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/product_home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/shop.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/shop.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/form.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-dropdown.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/product/buy.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/product/buy.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -216,7 +223,10 @@
       <workItem from="1602789571520" duration="9188000" />
       <workItem from="1602833946262" duration="25631000" />
       <workItem from="1602930293069" duration="4722000" />
-      <workItem from="1603013146785" duration="5567000" />
+      <workItem from="1603013146785" duration="6198000" />
+      <workItem from="1603023810756" duration="2228000" />
+      <workItem from="1603064867083" duration="1960000" />
+      <workItem from="1603090567104" duration="3493000" />
     </task>
     <task id="LOCAL-00001" summary="Building admin interface">
       <created>1602789785198</created>
@@ -260,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1602939179649</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Buy buttons now work. Stock update made easier">
+      <created>1603019816823</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1603019816823</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +302,8 @@
     <MESSAGE value="Categories can now be added, deleted and edited" />
     <MESSAGE value="Items now able to be created, destroyed and updated. Linked to categories" />
     <MESSAGE value="Items now appear in shop view, buy button needs linking up." />
-    <option name="LAST_COMMIT_MESSAGE" value="Items now appear in shop view, buy button needs linking up." />
+    <MESSAGE value="Buy buttons now work. Stock update made easier" />
+    <option name="LAST_COMMIT_MESSAGE" value="Buy buttons now work. Stock update made easier" />
   </component>
   <component name="WindowStateProjectService">
     <state x="735" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603016931245">
@@ -320,14 +338,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="583" height="446" key="SwitcherDM/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602841870037" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1602939184336">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603019822865">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602860531087" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1603019822865" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1602939184336" />
-    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1602841873823">
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1603093757207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" width="672" height="677" key="run.anything.popup/-1920.-8.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1602841873823" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603093757207" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1603091203504">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603091203504" />
   </component>
 </project>

@@ -17,8 +17,9 @@
                         <p>Admin: <input type = "checkbox" checked onclick="return false"></p>
                     @else
                         <p>Admin: <input type = "checkbox" name = "makeAdmin" onclick="return false"></p>
-                        <p><button class="inline-flex items-center justify-center p-2 rounded-md bg-blue-300 text-gray-800 hover:text-gray-800 hover:bg-red-500 focus:outline-none focus:bg-blue-900 focus:text-gray-500 transition duration-150 ease-in-out" type = 'button' onclick="window.location.href='./{{ $user->username }}/create'">Make Admin</button><button class = "ml-4 inline-flex items-center justify-center p-2 rounded-md bg-blue-300 text-gray-800 hover:text-gray-800 hover:bg-red-500 focus:outline-none focus:bg-blue-900 focus:text-gray-500 transition duration-150 ease-in-out" type="button" onclick="window.location.href=('./{{  $user->username  }}/destroy')">Delete user</button></p>
+                    <p><button class="inline-flex items-center justify-center p-2 rounded-md bg-blue-300 text-gray-800 hover:text-gray-800 hover:bg-red-500 focus:outline-none focus:bg-blue-900 focus:text-gray-500 transition duration-150 ease-in-out" type = 'button' onclick="window.location.href='{{ url("admin/index/".$user->username . "/create/")}}'">Make Admin</button></p>
                     @endif
+                    <p><button class = "ml-4 inline-flex items-center justify-center p-2 rounded-md bg-blue-300 text-gray-800 hover:text-gray-800 hover:bg-red-500 focus:outline-none focus:bg-blue-900 focus:text-gray-500 transition duration-150 ease-in-out" type="button" onclick="window.location.href=('{{ url("admin/index/".$user->username . "/destroy/")}}'">Delete user</button></p>
                     <br>
                 @endforeach
             </div>
